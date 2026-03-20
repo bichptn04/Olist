@@ -24,7 +24,8 @@ The Power BI dashboard provides an interactive overview of sales performance and
 Sales Overview: Displays key metrics such as total revenue, orders, customers, and sales trends over time to identify growth patterns and seasonality.
 Customer Analysis: Highlights customer metrics including retention, average order value (AOV), and segmentation based on RFM to identify high-value and at-risk customers.
 
-
+![Overview](./Visualizations/Sales Performance Dashboard-Overview.jpg)
+![Customer](./Visualizations/Sales Performance Dashboard-Customer.jpg
 
 ## Customer Segmentation (Python)
 Python was used to perform advanced customer segmentation by combining RFM analysis with clustering techniques. After preprocessing and aggregating transactional data at the customer level, Recency, Frequency, and Monetary (RFM) metrics were calculated and normalized.
