@@ -24,9 +24,10 @@ Raw CSV Files → Staging Tables → Data Warehouse (Star Schema) → Power BI D
 - Clean and transform data using SQL
 - Build fact and dimension tables
 - Connect to Power BI for visualization
+
 ## Star Schema (SQL)
 
-![Star Schema](./Visualizations/Star%20Schema.png)
+![Star Schema](./Visualizations/Star%20Schema.jbg)
 This structure improves query performance and simplifies analytical reporting.
 ## Dashboard (Power BI)
 The Power BI dashboard provides an interactive overview of sales performance and customer behavior.
@@ -35,21 +36,16 @@ The Power BI dashboard provides an interactive overview of sales performance and
 
 ![Overview](./Visualizations/Sales%20Performance%20Dashboard-Overview.jpg)
 
-![Customer](./Visualizations/Sales%20Performance%20Dashboard-Customer.jpg
+![Customer](./Visualizations/Sales%20Performance%20Dashboard-Customer.jpg)
 
 ## Customer Segmentation (Python)
 Python was used to perform advanced customer segmentation by combining RFM analysis with clustering techniques. After preprocessing and aggregating transactional data at the customer level, Recency, Frequency, and Monetary (RFM) metrics were calculated and normalized.
 K-Means clustering was then applied to group customers into distinct segments based on their purchasing behavior. The optimal number of clusters was determined using Elbow Method. Each cluster represents a specific customer profile, such as low value, high-value, loyal, and churned customers.
 
+![Customer Distribution by Cluster](./Visualizations/Customer%20Distribution%20by%20Cluster.png)
 This approach provides a more data-driven and scalable segmentation compared to rule-based methods, enabling deeper insights into customer distribution and supporting targeted marketing strategies to improve retention and maximize revenue.
 ## Key Insights
 There is no significant recurring drop or spike across the same months in different years, suggesting that seasonality impact is limited.
 Customer retention remains relatively low (3.1%), as many customers make only one or few purchases.
 A significant portion of customers falls into low-frequency and low-monetary segments, suggesting opportunities for engagement and upselling.
 Segmentation results enable targeted strategies, such as rewarding high-value customers and re-engaging inactive users to improve overall revenue performance.
-
-
-
-
-
-
