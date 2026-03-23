@@ -103,7 +103,8 @@ CREATE TABLE dim_product (
     product_weight FLOAT,
     product_length FLOAT,
     product_height FLOAT,
-    product_width FLOAT
+    product_width FLOAT,
+	FOREIGN KEY (product_id) REFERENCES dim_product(product_id)
 );
 CREATE TABLE dim_date (
     date_key INT PRIMARY KEY,  
@@ -145,17 +146,30 @@ SELECT TOP 10 * FROM dim_date;
 
 -- Create Fact table
 CREATE TABLE fact_sales (
-    order_id VARCHAR(50),
+    order_id NVARCHAR(50),
     order_item_id INT,
     date_key INT,
-    customer_id VARCHAR(50),
-    product_id VARCHAR(50),
+    customer_id NVARCHAR(50),
+    product_id NVARCHAR(50),
     price FLOAT,
     freight FLOAT,
     total_amount AS (price + freight),
     order_purchase DATETIME,
     order_delivered_customer DATETIME,
-	 PRIMARY KEY(order_id, order_item_id)
+	PRIMARY KEY(order_id, order_item_id),
+
+    CONSTRAINT FK_fact_customers
+        FOREIGN KEY (customer_id)
+        REFERENCES dim_customers(customer_id),
+    CONSTRAINT FK_fact_orders
+        FOREIGN KEY (order_id)
+        REFERENCES dim_orders(order_id),
+    CONSTRAINT FK_fact_product
+        FOREIGN KEY (product_id)
+        REFERENCES dim_product(product_id),
+    CONSTRAINT FK_fact_date
+        FOREIGN KEY (date_key)
+        REFERENCES dim_date(date_key)
 );
 -- Import data to Fact table
 INSERT INTO fact_sales (
