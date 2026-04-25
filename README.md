@@ -49,6 +49,9 @@ K-Means clustering was then applied to group customers into distinct segments ba
 This approach provides a more data-driven and scalable segmentation compared to rule-based methods, enabling deeper insights into customer distribution and supporting targeted marketing strategies to improve retention and maximize revenue.
 ## Key Insights
 There is no significant recurring drop or spike across the same months in different years, suggesting that seasonality impact is limited.
+
 Customer retention remains relatively low (3.1%), as many customers make only one or few purchases.
+
 A significant portion of customers falls into low-frequency and low-monetary segments, suggesting opportunities for engagement and upselling.
+
 Segmentation results enable targeted strategies, such as rewarding high-value customers and re-engaging inactive users to improve overall revenue performance.
